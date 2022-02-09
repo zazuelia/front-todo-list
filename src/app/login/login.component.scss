@@ -1,0 +1,38 @@
+.body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgb(152, 105, 182);
+}
+
+.card-login {
+    display: flex;
+    width: 300px;
+    margin-bottom: 80px;
+}
+
+.div-divider {
+    position: relative;
+    margin: 15px auto 30px auto;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.inputs-line {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.btn-lgn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}

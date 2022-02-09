@@ -1,0 +1,113 @@
+.body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgb(152, 105, 182);
+}
+
+.card-tasks {
+    display: flex;
+    width: 85%;
+    min-height: 70%;
+    margin-bottom: 50px;
+}
+
+.card-tasks-inner {
+    width: 100%;
+}
+
+.div-divider {
+    position: relative;
+    margin: 0 auto 30px auto;
+}
+
+.card-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.welcome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logout-text {
+    color: grey;
+    font-size: 12px;
+}
+
+.task-add-outter {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 20px auto 10px auto;
+}
+
+.task-add-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tasks {
+    margin: 0;
+}
+
+.no-tasks {
+    font-size: 20px;
+    color: grey;
+    margin: 100px auto auto auto;
+    text-align: center;
+}
+
+.tasks-line {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-style: solid;
+    border-width: 0 0 1px 0;
+    border-color: rgb(218, 217, 217);
+}
+
+.task-text {
+    display: flex;
+    column-gap: 10px ;
+    flex-direction: row;
+}
+
+.task-name-unchecked {
+    display: flex;
+    column-gap: 10px ;
+    flex-direction: row;
+}
+
+.task-name-checked {
+    display: flex;
+    column-gap: 10px ;
+    flex-direction: row;
+    text-decoration: line-through;
+}
+
+.task-del-icon {
+    display: flex;
+    flex-direction: row;
+}
+
+.task-update {
+    color: grey;
+    font-size: 11px;
+}
+
+.completed {
+    margin-top: 15px;
+}

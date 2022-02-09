@@ -1,0 +1,39 @@
+<div class="body">
+    <mat-card class="card-login">
+        <div>
+            <mat-card-title>Welcome</mat-card-title>
+            <div class="div-divider">
+                <mat-divider></mat-divider>
+            </div>
+            <mat-card-content>
+                <div class="inputs">
+                    <div class="inputs-line">
+                        <div>
+                            <mat-icon color="primary">account_circle</mat-icon>
+                        </div>
+                        <div>
+                            <mat-form-field>
+                                <input matInput type="text" placeholder="User" [(ngModel)]="userName">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="inputs-line">
+                        <div>
+                            <mat-icon color="primary">lock</mat-icon>
+                        </div>
+                        <div>
+                            <mat-form-field>
+                                <input matInput type="password" placeholder="Password" [(ngModel)]="password">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="btn-lgn">
+                        <div>
+                            <button mat-raised-button color="primary" (click)="login()">Login</button>
+                        </div>
+                    </div>
+                </div>
+            </mat-card-content>
+        </div>
+    </mat-card>
+</div>

@@ -1,0 +1,91 @@
+<div class="body">
+    <mat-card class="card-tasks">
+        <div class="card-tasks-inner">
+            <mat-card-title>
+                <div class="card-title">
+                    <div class="welcome">
+                        Tasks of {{ userName }}
+                    </div>
+                    <div class="logout">
+                        <div>
+                            <button mat-button (click)="logout()">
+                                <mat-icon color="primary">logout</mat-icon>
+                            </button>
+                        </div>
+                        <div class="logout-text">
+                            Logout
+                        </div>
+                    </div>
+                </div>
+            </mat-card-title>
+            <div class="div-divider">
+                <mat-divider></mat-divider>
+            </div>
+            <mat-card-content>
+                <mat-form-field>
+                    <input matInput type="text" placeholder="Task" [(ngModel)]="newTask">
+                </mat-form-field>
+                <button mat-button (click)="addTask()">
+                    <mat-icon color="primary">add_circle</mat-icon>                                            
+                </button>
+                <div>                    
+                    <ng-container *ngIf="tasksChecked.length > 0 || tasksUnchecked.length > 0; else noTasks"
+                        class="tasks">
+                        <div *ngFor="let task of tasksUnchecked; let i = index">
+                            <div class="tasks-line">
+                                <div class="task-text">
+                                    <div>
+                                        <mat-checkbox color="primary" [(ngModel)]="task.checked"
+                                            (change)="checkTask(i, task.checked)"></mat-checkbox>
+                                    </div>
+                                    <div class="task-name-unchecked">
+                                        {{ task.taskName }}
+                                    </div>
+                                    <div class="task-update">
+                                        {{ task.lastUpdate }}
+                                    </div>
+                                </div>
+                                <div class="task-del-icon">
+                                    <button mat-button (click)="removeTask(task)">
+                                        <mat-icon color="warn">delete</mat-icon>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div *ngIf="tasksChecked.length > 0" class="completed">
+                            Concluded:
+                        </div>
+                        <div *ngFor="let task of tasksChecked; let i = index">
+                            <div class="tasks-line">
+                                <div class="task-text">
+                                    <div>
+                                        <mat-checkbox color="primary" [(ngModel)]="task.checked"
+                                            (change)="checkTask(i, task.checked)"></mat-checkbox>
+                                    </div>
+                                    <div class="task-name-checked">
+                                        {{ task.taskName }}
+                                    </div>
+                                    <div class="task-update">
+                                        {{ task.lastUpdate }}
+                                    </div>
+                                </div>
+                                <div class="task-del-icon">
+                                    <button mat-button (click)="removeTask(task)">
+                                        <mat-icon color="warn">delete</mat-icon>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-container>
+                    <ng-template #noTasks>
+                        <ng-container>
+                            <div class="no-tasks">
+                                No tasks here!<br>Click "+" to create your first one!
+                            </div>
+                        </ng-container>
+                    </ng-template>
+                </div>
+            </mat-card-content>
+        </div>
+    </mat-card>
+</div>
